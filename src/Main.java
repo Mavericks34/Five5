@@ -78,5 +78,11 @@ public class Main {
                 System.out.println("Осенний");
                 break;
         }
+
+
+
+
+
+        System.out.println("Hard");
     }
 }
