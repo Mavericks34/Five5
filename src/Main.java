@@ -12,19 +12,15 @@ public class Main {
             System.out.println("Ошибка ввода");
         }
         System.out.println("Задание 2");
-        short clientDeviceYear = 2015;
+        short clientDeviceYear = 2016;
         if (clientOS == 0 && clientDeviceYear <= 2015) {
             System.out.println("Установите облегчённую версию для IOS по ссылке ...");
-        } else if (clientOS > 1 && clientDeviceYear < 2015) {
-            System.out.println("Не корректный ввод операционной системы");
         } else if (clientOS == 1 && clientDeviceYear <= 2015) {
             System.out.println("Установите облегчённую версию приложения для Android по ссылке ...");
         } else if (clientDeviceYear > 2015 && clientOS == 0) {
             System.out.println("Установите приложение для IOS по ссылке");
         } else if (clientDeviceYear > 2015 && clientOS == 1) {
             System.out.println("Установите версию приложениядля Android по ссылке");
-        } else if (clientOS > 1 && clientDeviceYear > 2015) {
-            System.out.println("Не корректный ввод операционной системы");
         } else {
             System.out.println("Неизвестная ошибка");
         }
@@ -42,20 +38,19 @@ public class Main {
 
 
         System.out.println("Задание 4");
-        long deliveryDistance = 95L;
+        short deliveryDistance = 95;
         if (deliveryDistance <= 20) {
             System.out.println("Потребуется 1 день");
-        } else if (deliveryDistance >= 20 && deliveryDistance <= 100) {
+        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
             System.out.println("Потребуется 2 дня");
+        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
+            System.out.println("Потребуется 3 дня");
         } else if (deliveryDistance > 100) {
             System.out.println("Доставка свыше 100 км невозможна.");
         }
 
         System.out.println("Задание 5");
         byte monthNumber = 12;
-        if (monthNumber > 12) {
-            System.out.println("Ошибка: некорректный номер месяца");
-        }
         switch (monthNumber) {
             case 12:
             case 1:
@@ -77,6 +72,8 @@ public class Main {
             case 11:
                 System.out.println(monthNumber + " месяц является осенним");
                 break;
+            default:
+                System.out.println("Такого месяца не существует");
         }
     }
 }
